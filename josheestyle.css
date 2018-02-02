@@ -62,6 +62,38 @@ a {
 }
 
 
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: rgba(245, 222, 179, 0.7);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    font-family: "Fjalla One";
+    float: left;
+    display: block;
+    color: DarkSlateGrey;
+    text-align: center;
+    padding: 12px 30px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: Wheat;
+    color: DarkSlateGrey;
+}
+
+/* Main content */
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+
 
 
 
@@ -97,7 +129,7 @@ img {
     margin: 0 auto;
 }
 
-.aboutbody div {
+.aboutbody {
 	background-color: rgba(196, 3, 3, 0.37);
 
 }
