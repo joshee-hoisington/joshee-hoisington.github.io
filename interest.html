@@ -1,6 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+
+
+
+
 <head>
    <title>Joshilyn Hoisington: Interesting Stuff!!!!</title>
    <link rel="stylesheet" type="text/css"
@@ -9,6 +14,11 @@
           href="https://fonts.googleapis.com/css?family=Fjalla One">
           <link href="josheestyle.css" rel="stylesheet" type="text/css">
 </head>
+
+
+
+
+
 <div class="navbar">
   <a href="index.html">JOSHILYN HOISINGTON</a>
   <a href="cv.html">Curricula Vitarum</a>
@@ -20,14 +30,38 @@
 <body>
     
             <div class="container content">
-                <h1>Here are some books I'm reading RIGHT NOW</h1>
+                <h1 id="haha">Here are some books I'm reading RIGHT NOW</h1>
 
 <ul>
-  <li><a href="http://www.nicolasbooks.com/book/9780253355140">Il Trittico, Turandot, and Puccini's Late Style</a> by Andrew Davis</li>
-  <li><a href="http://www.nicolasbooks.com/book/9781607618416">Computational Biology</a> edited by David Fenyö</li>
-  <li><a href="http://www.nicolasbooks.com/book/9780198718178">Quantitative Historical Linguistics</a> by Barbara McGillivray</li>
+  <li></li>
+  <li></li>
+  <li></li>
   
 </ul>
+<script>
+
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","recs.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+
+var x=xmlDoc.getElementsByTagName("book");
+
+
+document.getElementsByTagName("li")[0].innerHTML = x[0].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+document.getElementsByTagName("li")[1].innerHTML = x[1].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+document.getElementsByTagName("li")[2].innerHTML = x[2].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+
+
+
+</script>
 <h2>Some other things I'm interested in at the moment:<br>
 Opera Performance Librarianship<br>
 Being a queer woman in academia<br>
@@ -38,5 +72,5 @@ Kombucha<br></h2>
             </div>
         
     </div>
-    
+   
 </body>
